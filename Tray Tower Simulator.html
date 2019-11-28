@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tray Tower Simulator | MTO</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="section-input">
+        <div class="row">
+          <div class="input">
+            <div class="input__form">
+              <form action="#" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">
+                    Tray Tower Simulator
+                  </h2>
+                </div>
+                <div class="form__group">
+                  <select class="add__mode form__option">
+                    <option value="co-current" selected>Co-Current Flow</option>
+                    <option value="counter-current"
+                      >Counter-Current Flow</option
+                    >
+                  </select>
+                </div>
+                <div class="form__group">
+                  <label
+                    for="Equilibrium Curve"
+                    class="heading-tertiary u-margin-bottom-small"
+                    >Equilibrium Curve :</label
+                  >
+                </div>
+                <div class="form__group">
+                  <input
+                    class="form__input"
+                    placeholder="Slope"
+                    id="slope"
+                    required
+                  />
+                </div>
+                <div class="form__group">
+                  <label
+                    for="Top Operating Point"
+                    class="heading-tertiary u-margin-bottom-small"
+                    >Top Operating Point :</label
+                  >
+                </div>
+                <div class="form__group">
+                  <input
+                    class="form__input"
+                    placeholder="X:1"
+                    id="topX"
+                    required
+                  />
+
+                  <input
+                    class="form__input"
+                    placeholder="Y:1"
+                    id="topY"
+                    required
+                  />
+                </div>
+                <div class="form__group">
+                  <label
+                    for="Bottom Operating Point"
+                    class="heading-tertiary u-margin-bottom-small"
+                    >Bottom Operating Point :</label
+                  >
+                </div>
+                <div class="form__group">
+                  <input
+                    class="form__input"
+                    placeholder="X:(n + 1)"
+                    id="bottomX"
+                    required
+                  />
+
+                  <input
+                    class="form__input"
+                    placeholder="Y:(n + 1)"
+                    id="bottomY"
+                    required
+                  />
+                </div>
+                <div class="form__group">
+                  <button class="btn__sim btn btn--blue">
+                    Next step &rarr;
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="plot"></div>
+      </section>
+    </main>
+  </body>
+  <script src="app.js"></script>
+</html>
